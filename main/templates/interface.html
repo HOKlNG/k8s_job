@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% load static %}
+{% block header %}
+<script type="text/javascript" src="{% static 'js/hs_custom.js' %}"></script>
+{% endblock %}
+{% block contents %}
+{% csrf_token %}
+<section class="left-image">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'img/dead_docker.png' %}" alt="">
+      </div>
+      <div class="col-md-6">
+        <div class="right-content">
+          <h4>Kubernetes - Controller .</h4>
+          <div class="queue-area">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+            <input class="queue-input" style="margin:5px;" placeholder="input keyword">
+          </div>
+          <div id="go" class="primary-button" onclick="to_redis()">
+            <a href="#">Run</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}
