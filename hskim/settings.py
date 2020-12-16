@@ -29,7 +29,7 @@ SECRET_KEY = 'pbr4v*e(@%m%=(fr*za=fd3112@%1l1svd4^r6!#r03**x8c)2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

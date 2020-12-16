@@ -5,13 +5,13 @@ RUN apt-get update \
        postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /app
+COPY . /k8s_interface
 
-RUN pip install -r /app/requirements.txt
+RUN pip install -r /k8s_interface/requirements.txt
 
-RUN chmod 755 /app/start
+RUN chmod 755 /k8s_interface/start
 
-WORKDIR /app
+WORKDIR /k8s_interface
 EXPOSE 8000
 
-ENTRYPOINT ["/app/start"]
+ENTRYPOINT ["/k8s_interface/start"]
